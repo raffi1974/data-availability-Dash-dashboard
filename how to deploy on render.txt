@@ -1,0 +1,70 @@
+Step 1: Update Your Project Files
+First, we need to prepare your project files for a professional hosting environment.
+
+1. The Main Python Script (dashboard.py)
+
+I've updated the script to remove the temporary ngrok parts and prepare it for a production server.
+
+
+2. The Requirements File (requirements.txt)
+
+We need to add gunicorn, which is a production-grade web server that Render will use to run your app.
+
+
+3. The Procfile (NEW FILE)
+
+This is a new, single-line file that tells Render how to start your web application. Create a new file named Procfile (with no extension) and add the following line:
+
+Step 2: Follow the Deployment Guide
+Now that your project files are correct, you can follow this detailed guide. It will walk you through putting your code on GitHub and deploying it to Render to get your permanent public link.
+
+
+(Note: Your main branch might be master or main. Use the command GitHub provides.)
+* After these commands run, refresh your GitHub page. You should see all your files (dashboard.py, Procfile, etc.) there.
+
+Part 3: Deploy the Application on Render
+Now you'll connect your GitHub repository to Render to bring your dashboard to life.
+
+Create a Render Account:
+
+Go to dashboard.render.com and sign up using your GitHub account. This is the easiest way as it automatically links them.
+
+Create a New Web Service:
+
+On the Render dashboard, click "New +" and select "Web Service".
+
+Choose your GitHub account and select the repository you just created (data-availability-dashboard). Click "Connect".
+
+Configure the Service:
+
+Name: Give your service a unique name (e.g., my-data-dashboard). This will be part of your public URL.
+
+Region: Choose a region closest to you.
+
+Branch: Should default to main or master.
+
+Root Directory: Leave this blank.
+
+Runtime: Render should automatically detect Python 3.
+
+Build Command: pip install -r requirements.txt (This should be the default).
+
+Start Command: gunicorn dashboard:server (Render should automatically detect this from your Procfile).
+
+Instance Type: Make sure to select the Free plan.
+
+Deploy!
+
+Scroll to the bottom and click "Create Web Service".
+
+Render will now start building and deploying your application. You will see a log of the process. This can take a few minutes.
+
+You'll see messages like "Build successful" and "Deploy successful".
+
+Get Your Link:
+
+Once it's done, your public URL will be displayed at the top of the page, like https://your-app-name.onrender.com.
+
+Click this link, and your interactive dashboard will be live for anyone to see!
+
+Your dashboard is now permanently online. If you want to make changes, you just need to update your code, push the changes to GitHub, and Render will automatically redeploy the new version for you.

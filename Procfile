@@ -1,1 +1,1 @@
-web: gunicorn dashboard:server
+web: gunicorn data_availability_dashboard:server
