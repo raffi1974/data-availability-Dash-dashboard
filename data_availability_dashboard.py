@@ -37,7 +37,7 @@ else:
 
 # --- User Input Section ---
 # ACTION NEEDED: Update these variables if your file name or sheet names are different.
-EXCEL_FILE_PATH = 'C:/Users/511232/Desktop/DSS/DATA AVAILABILITY INTERACTIVE DASHBOARD/population_hhld.xlsx'  # The name of your Excel file. Must be in the same folder as this script.
+EXCEL_FILE_PATH =  'population_hhld.xlsx'
 DATA_SHEET_NAME = 'data'  # The name of the sheet containing the main dataset.
 CRITERIA_SHEET_NAME = 'criteria'  # The name of the sheet with the availability criteria.
 
