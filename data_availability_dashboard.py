@@ -37,9 +37,9 @@ else:
 
 # --- User Input Section ---
 # ACTION NEEDED: Update these variables if your file name or sheet names are different.
-EXCEL_FILE_PATH = 'data.xlsx'  # The name of your Excel file. Must be in the same folder as this script.
-DATA_SHEET_NAME = 'population_hhld'  # The name of the sheet containing the main dataset.
-CRITERIA_SHEET_NAME = 'number_of_years_tobe_available'  # The name of the sheet with the availability criteria.
+EXCEL_FILE_PATH = 'C:/Users/511232/Desktop/DSS/DATA AVAILABILITY INTERACTIVE DASHBOARD/data.xlsx'  # The name of your Excel file. Must be in the same folder as this script.
+DATA_SHEET_NAME = 'data'  # The name of the sheet containing the main dataset.
+CRITERIA_SHEET_NAME = 'criteria'  # The name of the sheet with the availability criteria.
 
 # --- 1. Data Loading and Preparation ---
 def load_data(file_path, data_sheet, criteria_sheet):
