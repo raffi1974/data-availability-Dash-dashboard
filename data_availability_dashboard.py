@@ -71,7 +71,7 @@ if df is None or criteria is None:
 criteria_dict = criteria.set_index('Indicator')['number of years'].to_dict()
 
 # Define the list of columns that are considered for disaggregation.
-disaggregation_cols = ['Age', 'group', 'Area', 'Sex', 'Nationality']
+disaggregation_cols = ['Age group', 'Area', 'Sex', 'Nationality']
 
 # --- 2. Availability Calculation ---
 # This section dynamically determines which disaggregations are relevant for each indicator.
